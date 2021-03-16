@@ -15,12 +15,13 @@ export default class AllAbilities extends Component{
              allAbilities)));
     };
     render() {
+        const{allAbilities} = this.state;
         return(
             <>
                 <div class="Text-center mt-5 mb-5">
                     <h1>All Abilities</h1>
                     <div class="d-flex flex-column">
-                    {this.state.allAbilities.map(ability =>
+                    {allAbilities.map(ability =>
                         <div class="p-2">
                             <Link to={`/ability/${ability.ability_id}`}>
                             <button type="button" class="btn btn-success m-5 p-2 " key={ability.ability_id}>{ability.ability_name}</button>
@@ -37,13 +38,6 @@ export default class AllAbilities extends Component{
                     </div>
                 </div>
             </>
-            // <>
-            // <div>
-            // <button key={this.state.ability_id}>{this.state.ability_name}</button>
-            // </div>
-            // <h1>Amount of pokemon who has the ability:{this.state.amount_poki}</h1>
-            // <h1>Sum of poki height for this ability:{this.state.total_height}</h1>
-            // </>
         )
     }
 }

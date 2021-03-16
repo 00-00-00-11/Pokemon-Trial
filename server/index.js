@@ -58,7 +58,7 @@ app.get("/creatures", async(req,res) => {
 app.get("/creatures/:id", async(req,res) => {
     try{
         const{id} = req.params;
-        let detailPokiText ="SELECT creatures.poki_id,creatures.name,creatures.height,creatures.poki_img,ability.ability_name FROM poki_able FULL OUTER JOIN creatures ON poki_able.poki_id = creatures.poki_id FULL OUTER JOIN ability ON poki_able.ability_id = ability.ability_id WHERE creatures.poki_id = $1"
+        let detailPokiText ="SELECT creatures.poki_id,creatures.name,creatures.height,creatures.poki_img,ability.ability_id,ability.ability_name FROM poki_able FULL OUTER JOIN creatures ON poki_able.poki_id = creatures.poki_id FULL OUTER JOIN ability ON poki_able.ability_id = ability.ability_id WHERE creatures.poki_id = $1"
         const creatures = await client.query(detailPokiText,[id]);
         // console.table(creatures.rows);
         res.status(200).json(creatures.rows)
