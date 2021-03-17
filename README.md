@@ -4,6 +4,7 @@ Pokeweb display all the Pokemon, Pokemon abilities and their images from [Pokemo
 
 ---
 ### :japanese_ogre:App demo
+* Pokeweb is a RWD website.
 <img src = "readme_assets/pokeweb_demo.gif" width = "600" height="338">
 
 ### :japanese_ogre:Setup
