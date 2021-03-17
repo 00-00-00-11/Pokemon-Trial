@@ -25,7 +25,8 @@ Pokeweb display all the Pokemon, Pokemon abilities and their images from [Pokemo
     2. If you want to add `amount_poki` and `total_height` data to database: Run the functions `update_amount_poki()` and `update_total_height_ability()` in `execute.js`.
 
 * Open another terminal, make sure the path is in `client` package.
-    0. Type `npm start` in your terminal to start port `localhost:3000`.And you will see the website.
+    0. Type `npm start` in your terminal to start port `localhost:3000`
+    1. you will see the website.
 
 ---
 ### :japanese_ogre:Used modules, technologies and concepts
