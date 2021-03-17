@@ -1,6 +1,6 @@
 # Pokeweb! A Pokemon Illustrated Book
 [Pokemon](https://en.wikipedia.org/wiki/Pok%C3%A9mon) are animals living in different dimension with special abilities.
-Pokeweb display all the Pokemon, Pokemon abilities and their images from [Pokemon API](https://pokeapi.co)
+Pokeweb displays all the Pokemon, Pokemon abilities and their images. All the data comes from [Pokemon API](https://pokeapi.co)
 
 ---
 ### :japanese_ogre:App demo
@@ -8,18 +8,24 @@ Pokeweb display all the Pokemon, Pokemon abilities and their images from [Pokemo
 <img src = "readme_assets/pokeweb_demo.gif" width = "600" height="338">
 
 ### :japanese_ogre:Setup
-0. Install [Node.js](https://nodejs.org/en/download/)
-1. [Clone this repository](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
-
 
 - [x] data_crawling package
+
+0.  Install[Python3](https://www.python.org/download/releases/3.0/)
+1.  Initialize a virtualenv to manage all required packages: `pip install pipenv`,`pipenv shell`
+2.  Install all required packages based on `Pipfile`:`pipenv install`
+
 * Open your terminal, make sure the path is in `data_crawling` package.
-* Make `creature` and `poki_able` tables: Run the code `print_csv(result[0])`,`print_csv_able(result[1])` at line `112` and `113`. 
-* Make `ability` table: Run the code `print_csv_ability(all_ability_data)` at line `132`.
+* If you want to print out `creature` and `poki_able` tables: Run the code `print_csv(result[0])`,`print_csv_able(result[1])` at line `112` and `113`. 
+* If you want to print out `ability` table: Run the code `print_csv_ability(all_ability_data)` at line `132`.
 * Download pokemon images: Run the code `img_crawler() ` at line `156`.
 
-
 - [x] client and server packages
+
+0. Install [Node.js](https://nodejs.org/en/download/)
+1. [Clone this repository](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
+2. `npm install` to install all required packages.
+
 * Open your terminal, make sure the path is in `server` package.
     1. Connect to port `localhost:5000` and Postgresql database: Create a [.env](https://medium.com/the-node-js-collection/making-your-node-js-work-everywhere-with-environment-variables-2da8cdf6e786) file and add `USER`,`PASSWORD`,`HOST` and `PORT` variables, also add `DATABASE` variable for your database name and set `SERVER_PORT`variable as `5000`  in the file.
     2. Type `npm run start` in your terminal to start back-end serving.
