@@ -11,7 +11,7 @@ Pokeweb displays all the Pokemon, Pokemon abilities and their images. All the da
 
 - [x] data_crawling package
 
-0.  Install[Python3](https://www.python.org/download/releases/3.0/)
+0.  Install [Python3](https://www.python.org/download/releases/3.0/)
 1.  Initialize a virtualenv to manage all required packages: `pip install pipenv`,`pipenv shell`
 2.  Install all required packages based on `Pipfile`:`pipenv install`
 
