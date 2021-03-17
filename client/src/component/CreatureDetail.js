@@ -29,7 +29,7 @@ export default class CreatureDetail extends Component{
                                 <p>WhO Am I? </p>
                                 <h3 class="mb-5"><b>{detail.name}</b></h3>
                                 <p>ID: {detail.poki_id}</p>
-                                <img src={detail.poki_img} alt={detail.name} width="500" height="600"/>
+                                <img src={`${process.env.PUBLIC_URL+detail.poki_img}`} alt={detail.name} />
                             </div>
                         )}
                     <div class="d-flex justify-content-center mt-5">
