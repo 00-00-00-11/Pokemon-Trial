@@ -2,7 +2,7 @@ var text = "SELECT creatures.name,creatures.height,ability.ability_id,ability.ab
 var updateAmountPoki = "UPDATE ability SET amount_poki = $1 WHERE ability_id = $2";
 var heightText = "SELECT creatures.height FROM poki_able FULL OUTER JOIN creatures ON  poki_able.poki_id = creatures.poki_id FULL OUTER JOIN ability ON poki_able.ability_id = ability.ability_id WHERE ability.ability_id = $1"
 var updateHeightAbility = "UPDATE ability SET total_height = $1 WHERE ability_id = $2";
-update_amount_poki() //update amount_poki column in ability table
+//update_amount_poki() //update amount_poki column in ability table
 async function update_amount_poki() {
     try {
         await client.connect();

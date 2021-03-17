@@ -5,7 +5,9 @@ export default class AllCreatures extends Component{
     constructor(){
         super();
         this.state ={
-           allCreatures:[]
+           allCreatures:[],
+           orderBy:'height',
+           orderDir:'asc'
         };
 
     }
@@ -16,9 +18,12 @@ export default class AllCreatures extends Component{
              allCreatures)));
     };
     render() {
-        const {allCreatures} = this.state
-        const sortByHeight = allCreatures.sort((a,b) => {
-            return(a.height > b.height?1:-1);
+        let order; //reverse the order
+        const {allCreatures,orderDir,orderBy} = this.state;
+        let filterAllCreatures = allCreatures;
+        orderDir === 'asc'? order = 1: order=-1;
+        filterAllCreatures.sort((a,b) => {
+            return(a[orderBy] < b[orderBy]?-1*order:1*order);
         });
         
 
@@ -27,7 +32,7 @@ export default class AllCreatures extends Component{
                 <div class="Text-center mt-5 mb-5">
                     <h1>All Creatures</h1>
                     <div class="d-flex flex-column">
-                    {sortByHeight.map(creature =>
+                    {filterAllCreatures.map(creature =>
                     <div class="p-2">
                         <Link to={`/creatures/${creature.poki_id}`}>
                             <button type="button" class="btn btn-warning m-5 p-2 " key={creature}>{creature.name}</button>

@@ -31,12 +31,6 @@ def organize_poki_api(data, poki_lst, ability_lst):
     single_poki_data['height'] = int(data['height'])
     single_poki_data['url'] = str(data['forms'][0]['url'])
     single_poki_data['poki_img'] = f'C:\\Users\\Demmi\\Desktop\\pokimon\\poki_img\\{creature_id}.png'
-    # print(raw_data['forms'])
-    # print(raw_data['height'])
-    # print(raw_data['sprites']['front_default'])
-    # print(raw_data['forms'][0]['url'][-2])
-    # print(single_poki_data)
-    # print(raw_data['abilities'])
     for a in data['abilities']:
         ability_lst.append((int(creature_id),int(a['ability']['url'][a['ability']['url'].index('y')+2:-1])))
 
@@ -96,28 +90,29 @@ def print_csv_able(data):
 all_poki_data = []
 all_poki_ability_data = []
 all_ability_data = []
-###print poki to csv
-# for num in single_item_generater():
-#     if (num-1)%20 == 0:##i = 1,21,41.....
-#         #sleep once every 20 pages
-#         t = random.choice([2,5,4,3,6,8,10]) # avoid being banned 
-#         time.sleep(t)
-#         raw_data = get_poki_api('pokemon',num)
-#         if raw_data == False:
-#             break
-#         else:
-#             result = organize_poki_api(raw_data,all_poki_data,all_poki_ability_data)
-#     else:
-#         raw_data = get_poki_api('pokemon',num)
-#         if raw_data == False:
-#             break
-#         else:
-#             result = organize_poki_api(raw_data,all_poki_data,all_poki_ability_data)
 
-# print_csv(result[0]) ##print poki table
-# print_csv_able(result[1]) ##print poki_able table
+###print creatures to csv###
+for num in single_item_generater():
+    if (num-1)%20 == 0:##i = 1,21,41.....
+        #sleep once every 20 pages
+        t = random.choice([2,5,4,3,6,8,10]) # avoid being banned 
+        time.sleep(t)
+        raw_data = get_poki_api('pokemon',num)
+        if raw_data == False:
+            break
+        else:
+            result = organize_poki_api(raw_data,all_poki_data,all_poki_ability_data)
+    else:
+        raw_data = get_poki_api('pokemon',num)
+        if raw_data == False:
+            break
+        else:
+            result = organize_poki_api(raw_data,all_poki_data,all_poki_ability_data)
 
-###print ability csv
+# print_csv(result[0]) ##PRINT creature TABLE HERE 
+# print_csv_able(result[1]) ##PRINT poki_able TABLE HERE
+
+###print ability csv###
 for num in single_item_generater():
     if (num-1)%20 == 0:
         t = random.choice([2,5,4,3,6,8,10]) # avoid being banned 
@@ -134,9 +129,9 @@ for num in single_item_generater():
         else:
             result = organize_ability_api(raw_data,all_ability_data)
 
-print_csv_ability(all_ability_data)##print ability table
+# print_csv_ability(all_ability_data) ##PRINT ability TABLE HERE
 
-
+###image crawling###
 def img_crawler():
     if os.path.isdir('poki_img') == False:
         os.mkdir('poki_img')
@@ -158,4 +153,4 @@ def img_crawler():
                     with open(f'poki_img/{num}.png','wb+') as f:
                         f.write(img_data)
 
-# img_crawler() #uncomment this will start image crawling
+# img_crawler() #uncomment this will auto start image crawling

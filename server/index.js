@@ -29,18 +29,18 @@ app.post("/creatures", async(req,res) => {
         console.error(e.stack)
     }
 })
-// app.post("/ability", async(req,res) => {
-//     const text = `INSERT INTO public.ability(ability_id,ability_name,amount_poki,total_height) VALUES($1,$2,$3,$4) RETURNING *`;
-//     try{
-//         const{ability_id,ability_name,amount_poki,total_height} = req.body;
-//         const value = [ability_id,ability_name,amount_poki,total_height]
-//         const newAbi = await client.query(text,value);
-//         res.json(newAbi.rows[0])
-//     }
-//     catch(e){
-//         console.error(e.stack)
-//     }
-// })
+app.post("/ability", async(req,res) => {
+    const text = `INSERT INTO public.ability(ability_id,ability_name,amount_poki,total_height) VALUES($1,$2,$3,$4) RETURNING *`;
+    try{
+        const{ability_id,ability_name,amount_poki,total_height} = req.body;
+        const value = [ability_id,ability_name,amount_poki,total_height]
+        const newAbi = await client.query(text,value);
+        res.json(newAbi.rows[0])
+    }
+    catch(e){
+        console.error(e.stack)
+    }
+})
 
 
 //GET
