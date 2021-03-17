@@ -9,11 +9,13 @@ Pokeweb displays all the Pokemon, Pokemon abilities and their images. All the da
 
 ### :japanese_ogre:Setup
 
+0. [Clone this repository](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
+
 - [x] data_crawling package
 
-0.  Install [Python3](https://www.python.org/download/releases/3.0/)
-1.  Initialize a virtualenv to manage all required packages: `pip install pipenv`,`pipenv shell`
-2.  Install all required packages based on `Pipfile`:`pipenv install`
+1.  Install [Python3](https://www.python.org/download/releases/3.0/)
+2.  Initialize a virtualenv to manage all required packages: `pip install pipenv`,`pipenv shell`
+3.  Install all required packages based on `Pipfile`:`pipenv install`
 
 * Open your terminal, make sure the path is in `data_crawling` package.
 * If you want to print out `creature` and `poki_able` tables: Run the code `print_csv(result[0])`,`print_csv_able(result[1])` at line `112` and `113`. 
@@ -22,8 +24,7 @@ Pokeweb displays all the Pokemon, Pokemon abilities and their images. All the da
 
 - [x] client and server packages
 
-0. Install [Node.js](https://nodejs.org/en/download/)
-1. [Clone this repository](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
+1. Install [Node.js](https://nodejs.org/en/download/)
 2. `npm install` to install all required packages.
 
 * Open your terminal, make sure the path is in `server` package.
