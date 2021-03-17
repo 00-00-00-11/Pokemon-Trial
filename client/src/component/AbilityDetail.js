@@ -19,18 +19,18 @@ export default class AbilityDetail extends Component{
         const {abilitiesDetails} = this.state;
         return(
             <>
-                <div class="Text-center mt-5 mb-5">
+                <div className="Text-center mt-5 mb-5">
                     <h1>Ability Details</h1>
-                    <div class="d-flex flex-column">
+                    <div className="d-flex flex-column">
            
                     {abilitiesDetails.map(detail =>
-                        <div class="p-2">
+                        <div className="p-2">
                             <Link to={`/creatures/${detail.poki_id}`}>
-                            <button type="button" class="btn btn-warning m-5 p-2 " key={detail.poki_id + detail.ability_id}>{detail.name}</button>
+                            <button type="button" className="btn btn-warning m-5 p-2 " key={detail.poki_id + detail.ability_id}>{detail.name}</button>
                             </Link>
-                            <div class="p-2">
+                            <div className="p-2">
                                 <p>ID: {detail.poki_id}</p>
-                                <div class="p-2 mb-5">
+                                <div className="p-2 mb-5">
                                     <img src={`${process.env.PUBLIC_URL+detail.poki_img}`} alt={detail.name} />
                                 </div>
                             </div>
