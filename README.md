@@ -5,6 +5,7 @@ Pokeweb display all the Pokemon, Pokemon abilities and their images from [Pokemo
 ---
 ### :japanese_ogre:App demo
 <img src = "readme_assets/pokeweb_demo.gif" width = "600" height="338">
+
 ### :japanese_ogre:Setup
 0. Install [Node.js](https://nodejs.org/en/download/)
 1. [Clone this repository](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
