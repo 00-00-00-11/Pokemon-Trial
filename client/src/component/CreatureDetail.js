@@ -26,7 +26,7 @@ export default class CreatureDetail extends Component{
                     <div class="d-flex flex-column mt-5">
                         {creatureDetail.slice(0,1).map(detail =>
                             <div class="p-2">
-                                <p>WhO Am I? </p>
+                                <p>Who Am I? </p>
                                 <h3 class="mb-5"><b>{detail.name}</b></h3>
                                 <p>ID: {detail.poki_id}</p>
                                 <img src={`${process.env.PUBLIC_URL+detail.poki_img}`} alt={detail.name} />

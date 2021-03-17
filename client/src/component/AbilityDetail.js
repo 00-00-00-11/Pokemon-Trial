@@ -30,7 +30,7 @@ export default class AbilityDetail extends Component{
                             </Link>
                             <div class="p-2">
                                 <p>ID: {detail.poki_id}</p>
-                                <div class="p-2">
+                                <div class="p-2 mb-5">
                                     <img src={`${process.env.PUBLIC_URL+detail.poki_img}`} alt={detail.name} />
                                 </div>
                             </div>

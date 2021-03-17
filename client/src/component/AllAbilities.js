@@ -28,7 +28,7 @@ export default class AllAbilities extends Component{
                             </Link>
                             <div class="p-2">
                                 <p >Total poki-height with {ability.ability_name}: {ability.total_height}</p>
-                                <div class="p-2">
+                                <div class="p-2 mb-5">
                                     <p >How many Pokemon has {ability.ability_name}? {ability.amount_poki}</p>
                                 </div>
                             </div>
