@@ -13,10 +13,10 @@ export default class Nav extends Component {
                  <h3>Pokemon!</h3>
                  <ul className="nav-links">
                   <Link style={navStyle} to="/ability"> 
-                    <li >Abilities</li>
+                    <li >All Abilities</li>
                   </Link>
                   <Link style={navStyle} to="/creatures">
-                    <li >Creatures</li>
+                    <li >All Creatures</li>
                   </Link>
                  </ul>
                 </nav>
