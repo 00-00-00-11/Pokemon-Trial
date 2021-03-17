@@ -4,7 +4,8 @@ Pokeweb displays all the Pokemon, Pokemon abilities and their images. All the da
 
 ---
 ### :japanese_ogre:App demo
-* Pokeweb is a RWD website.
+* Web-crawling package: After crawling 20 data, it will automatically stop for several seconds to avoid being banned by the api website.
+* Pokeweb is a RWD website, with an Express/Nodejs server, Postgresql database and Reactjs/Bootstrap4 as frontend.
 <img src = "readme_assets/pokeweb_demo.gif" width = "600" height="338">
 
 ### :japanese_ogre:Setup
