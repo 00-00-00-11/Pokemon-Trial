@@ -20,13 +20,13 @@ Pokeweb display all the Pokemon, Pokemon abilities and their images from [Pokemo
 
 - [x] client and server packages
 * Open your terminal, make sure the path is in `server` package.
-    0. Connect to port `localhost:5000` and Postgresql database: Create a [.env](https://medium.com/the-node-js-collection/making-your-node-js-work-everywhere-with-environment-variables-2da8cdf6e786) file and add `USER`,`PASSWORD`,`HOST` and `PORT` variables, also add `DATABASE` variable for your database name and set `SERVER_PORT`variable as `5000`  in the file.
-    1. Type `npm run start` in your terminal to start back-end serving.
-    2. If you want to add `amount_poki` and `total_height` data to database: Run the functions `update_amount_poki()` and `update_total_height_ability()` in `execute.js`.
+    1. Connect to port `localhost:5000` and Postgresql database: Create a [.env](https://medium.com/the-node-js-collection/making-your-node-js-work-everywhere-with-environment-variables-2da8cdf6e786) file and add `USER`,`PASSWORD`,`HOST` and `PORT` variables, also add `DATABASE` variable for your database name and set `SERVER_PORT`variable as `5000`  in the file.
+    2. Type `npm run start` in your terminal to start back-end serving.
+    3. If you want to add `amount_poki` and `total_height` data to database: Run the functions `update_amount_poki()` and `update_total_height_ability()` in `execute.js`.
 
 * Open another terminal, make sure the path is in `client` package.
-    0. Type `npm start` in your terminal to start port `localhost:3000`
-    1. you will see the website.
+    1. Type `npm start` in your terminal to start port `localhost:3000`
+    3. you will see the website.
 
 ---
 ### :japanese_ogre:Used modules, technologies and concepts
