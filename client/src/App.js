@@ -5,7 +5,6 @@ import AllAbilities from "./component/AllAbilities";
 import AllCreatures from "./component/AllCreatures";
 import AbilityDetail from "./component/AbilityDetail";
 import CreatureDetail from "./component/CreatureDetail";
-import SearchCreatures from "./component/SearchCreatures";
 import './App.css';
 
 class App extends Component {
@@ -21,12 +20,6 @@ class App extends Component {
           <Route path="/ability/:id" component={AbilityDetail}/>
           <Route path="/creatures/:id" component={CreatureDetail}/>
           </Switch>
-          <div className="container">
-            <SearchCreatures searchApts={this.searchApts}/>
-            <div>
-              <AllCreatures/>
-            </div>
-          </div>
         </div>
       </Router>
       
