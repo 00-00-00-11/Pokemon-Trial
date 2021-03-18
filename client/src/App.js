@@ -29,7 +29,7 @@ class App extends Component {
 
 const Home = () => {
   return(
-    <div  class="Text-center mt-5 mb-5">
+    <div  className="Text-center mt-5 mb-5">
       <h1>Welcome to Pokemon</h1>
     </div>
 

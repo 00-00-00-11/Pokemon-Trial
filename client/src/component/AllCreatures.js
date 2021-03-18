@@ -33,11 +33,11 @@ export default class AllCreatures extends Component{
 
         return(
             <>
-                <div className="Text-center mt-5 mb-5">
+                <div className="all-creatures Text-center mt-5 mb-5">
                    
                     <h1 className=" ">All Creatures</h1>
                
-                    <div className="container p-4 pb-5">
+                    <div className="search-beasts container p-4 pb-5">
                     <form >
                         <input
                           id="SearchBeast"
@@ -50,11 +50,11 @@ export default class AllCreatures extends Component{
                     </form>
                     </div>
                    
-                    <div className="d-flex flex-column">
+                    <div className="all-beasts-info d-flex flex-column">
                         {filterAllCreatures.map(creature =>
-                        <div className="p-2">
+                        <div className="beast-link p-2">
                             <Link to={`/creatures/${creature.poki_id}`}>
-                                <button type="button" className="btn btn-warning m-5 p-2 " key={creature}>{creature.name}</button>
+                                <button type="button" className="beast-name btn btn-warning m-5 p-2 " key={creature.poki_id}>{creature.name}</button>
                             </Link>
                             <div className="p-2">
                                 {creature.poki_img != null?
