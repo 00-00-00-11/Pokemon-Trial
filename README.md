@@ -40,7 +40,7 @@ Pokeweb displays all the Pokemon, Pokemon abilities and their images. All the da
 * Open another terminal, make sure the path is in `client` package.
     1. Type `npm start` in your terminal to start port `localhost:3000`
     2. you will see the website.
-    3. If you want to do Javascript reverse name snippet, run the code within `namesnippet/reverse.js` in the browser.
+    3. If you want to do Javascript reverse name snippet, run the code within `client/src/namesnippet/reverse.js` in the browser.
 
 ---
 ### :japanese_ogre:Used modules, technologies and concepts
