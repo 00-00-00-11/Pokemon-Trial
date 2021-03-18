@@ -4,10 +4,12 @@ Pokeweb displays all the Pokemon, Pokemon abilities and their images. All the da
 
 ---
 ### :japanese_ogre:App demo
-* Web-crawling package: After crawling 20 data, it will automatically stop for several seconds to avoid being banned by the api website.
-* Pokeweb is a RWD website, with an Express/Nodejs server, Postgresql database and Reactjs/Bootstrap4 as frontend.
-* Dynamic Search: Search Pokemon's name dynamically.
+- [x] Web-crawling package: After crawling 20 data, it will automatically stop for several seconds to avoid being banned by the api website.
+- [x] Pokeweb is a RWD website, with an Express/Nodejs server, Postgresql database and Reactjs/Bootstrap4 as frontend.
+- [x] Dynamic Search: Search Pokemon's name dynamically.
 <img src = "readme_assets/pokeweb_demo.gif" width = "600" height="338">
+
+- [x] Javascript reverse name snippet
 
 ### :japanese_ogre:Setup
 
@@ -33,10 +35,12 @@ Pokeweb displays all the Pokemon, Pokemon abilities and their images. All the da
     1. Connect to port `localhost:5000` and Postgresql database: Create a [.env](https://medium.com/the-node-js-collection/making-your-node-js-work-everywhere-with-environment-variables-2da8cdf6e786) file and add `USER`,`PASSWORD`,`HOST` and `PORT` variables, also add `DATABASE` variable for your database name and set `SERVER_PORT`variable as `5000`  in the file.
     2. Type `npm run start` in your terminal to start back-end serving.
     3. If you want to add `amount_poki` and `total_height` data to database: Run the functions `update_amount_poki()` and `update_total_height_ability()` in `execute.js`.
+    
 
 * Open another terminal, make sure the path is in `client` package.
     1. Type `npm start` in your terminal to start port `localhost:3000`
-    3. you will see the website.
+    2. you will see the website.
+    3. If you want to do Javascript reverse name snippet, run the code within `namesnippet/reverse.js` in the browser.
 
 ---
 ### :japanese_ogre:Used modules, technologies and concepts
