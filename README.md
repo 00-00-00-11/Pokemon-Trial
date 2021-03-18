@@ -11,6 +11,7 @@ Pokeweb displays all the Pokemon, Pokemon abilities and their images. All the da
 
 - [x] Javascript reverse name snippet
 
+---
 ### :japanese_ogre:Setup
 
 0. [Clone this repository](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
