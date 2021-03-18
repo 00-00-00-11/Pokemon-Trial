@@ -46,5 +46,5 @@ Pokeweb displays all the Pokemon, Pokemon abilities and their images. All the da
 ### :japanese_ogre:Used modules, technologies and concepts
 * Front-end: React.js, Bootstrap4, JS, CSS, HTML
 * Data-scraping/data organized: Python, python-dotenv, Pandas
-* Back-end and database: Nodejs, Express, node-postgres, Postgresql, dotenv
+* Back-end and database: Nodejs, Express, node-postgres, Postgresql, dotenv, postman
 ![database design](readme_assets/database_design_poki.PNG)
