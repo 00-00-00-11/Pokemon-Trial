@@ -16,7 +16,7 @@ Pokeweb displays all the Pokemon, Pokemon abilities and their images. All the da
 
 0. [Clone this repository](https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
 
-- [x] data_crawling package
+- [x] Data_crawling package
 
 1.  Install [Python3](https://www.python.org/download/releases/3.0/)
 2.  Initialize a virtualenv to manage all required packages: `pip install pipenv`,`pipenv shell`
@@ -27,13 +27,18 @@ Pokeweb displays all the Pokemon, Pokemon abilities and their images. All the da
 * If you want to print out `ability` table: Run the code `print_csv_ability(all_ability_data)` at line `132`.
 * Download pokemon images: Run the code `img_crawler() ` at line `156`.
 
-- [x] import data to your database
+- [x] If you want to import data to your database directly without doing data-crawling
 1.  Install [Pgadmin4](https://www.pgadmin.org/download/)
 2.  Choose the one you like: Open Query Tool within Pgadmin4 or open psql.
 3.  Copy the code within `server/pokemon_data.sql` file, and run it seperately in Pgadmin4 Query Tool or psql in order to create database,table and import csv files.
+*   Csv files and their database tables: 
+    1. `data-crawling/poki.csv`: table `creatures`
+    2. `data-crawling/ability.csv`: table `ability`
+    3. `data-crawling/poki_able.csv`: table `poki_able`
+![database design](readme_assets/database_design_poki.PNG)
 
 
-- [x] client and server packages
+- [x] Client and server packages
 
 1. Install [Node.js](https://nodejs.org/en/download/)
 2. `npm install` to install all required packages.
