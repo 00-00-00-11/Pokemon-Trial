@@ -27,6 +27,12 @@ Pokeweb displays all the Pokemon, Pokemon abilities and their images. All the da
 * If you want to print out `ability` table: Run the code `print_csv_ability(all_ability_data)` at line `132`.
 * Download pokemon images: Run the code `img_crawler() ` at line `156`.
 
+- [x] import data to your database
+1.  Install [Pgadmin4](https://www.pgadmin.org/download/)
+2.  Choose the one you like: Open Query Tool within Pgadmin4 or open psql.
+3.  Copy the code within `server/pokemon_data.sql` file, and run it seperately in Pgadmin4 Query Tool or psql in order to create database,table and import csv files.
+
+
 - [x] client and server packages
 
 1. Install [Node.js](https://nodejs.org/en/download/)
