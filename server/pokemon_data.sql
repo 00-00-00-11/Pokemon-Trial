@@ -66,3 +66,10 @@ COPY public.poki_able(id,poki_id,ability_id)
 ALTER TABLE public.ability
 ADD COLUMN amount_poki integer,
 ADD COLUMN total_height integer;
+
+
+-------------UPDATE img ROUTE------------------
+----------UPDATE public.creatures----------
+----------SET poki_img = REPLACE(creatures.poki_img, 'C:\Users\Demmi\Desktop\pokimon','')-------------
+
+
