@@ -14,14 +14,16 @@ CREATE TABLE public.creatures
     url text ,
     poki_img text,
     PRIMARY KEY (poki_id)
-)
+);
 
 CREATE TABLE public.ability
 (
     ability_id integer NOT NULL,
     ability_name character varying(30) NOT NULL,
+    amount_poki integer,
+    total_height integer,
     PRIMARY KEY (ability_id)
-)
+);
 
 CREATE TABLE public.poki_able
 (
@@ -29,8 +31,7 @@ CREATE TABLE public.poki_able
     poki_id integer NOT NULL,
     ability_id integer NOT NULL,
     PRIMARY KEY (id)
-)
-
+);
 -----------------------------CONSTRAINT-----------------------------
 
 ALTER TABLE public.creatures
@@ -55,11 +56,13 @@ ALTER TABLE public.poki_able
 
 -----------------------------IMPORT TABLES-----------------------------
 COPY public.ability(ability_id,ability_name)
-    FROM 'YOUR PATH TO CSV FILE\ability.csv' delimiter ',' csv header;
+    FROM 'YOUR PATH TO CSV\ability.csv' delimiter ',' csv header;
 COPY public.creatures(poki_id,name,height,url,poki_img)
-    FROM 'YOUR PATH TO CSV FILE\poki.csv' delimiter ',' csv header;
+    FROM 'YOUR PATH TO CSV\poki.csv' delimiter ',' csv header;
+COPY public.poki_able(id,poki_id,ability_id)
+    FROM 'YOUR PATH TO CSV\poki_able.csv' delimiter ',' csv header;
 ------------------------C:\Users\Demmi\Desktop\pokimon\data_crawling\ability.csv-------------------------
------------------------------ADD 2 MORE COLUMNS FOR ABILITY TABLE-----------------------------
+-----------------------------EXTRA:if you want to add 2 more columns to ability seperately-----------------------------
 ALTER TABLE public.ability
 ADD COLUMN amount_poki integer,
 ADD COLUMN total_height integer;
